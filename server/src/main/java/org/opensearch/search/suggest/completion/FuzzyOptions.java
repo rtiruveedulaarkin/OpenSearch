@@ -226,7 +226,7 @@ public class FuzzyOptions implements ToXContentFragment, Writeable {
         private int fuzzyMinLength = FuzzyCompletionQuery.DEFAULT_MIN_FUZZY_LENGTH;
         private int fuzzyPrefixLength = FuzzyCompletionQuery.DEFAULT_NON_FUZZY_PREFIX;
         private boolean unicodeAware = FuzzyCompletionQuery.DEFAULT_UNICODE_AWARE;
-        private int maxDeterminizedStates = Operations.DEFAULT_DETERMINIZE_WORK_LIMIT;
+        private int maxDeterminizedStates = 10000; // Operations.DEFAULT_DETERMINIZE_WORK_LIMIT;
 
         public Builder() {}
 

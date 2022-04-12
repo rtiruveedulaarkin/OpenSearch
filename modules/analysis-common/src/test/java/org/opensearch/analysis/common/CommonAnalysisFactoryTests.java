@@ -37,8 +37,6 @@ import org.apache.lucene.analysis.en.PorterStemFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.LimitTokenCountFilterFactory;
 import org.apache.lucene.analysis.reverse.ReverseStringFilterFactory;
 import org.apache.lucene.analysis.snowball.SnowballPorterFilterFactory;
-import org.apache.lucene.analysis.te.TeluguNormalizationFilterFactory;
-import org.apache.lucene.analysis.te.TeluguStemFilterFactory;
 import org.opensearch.indices.analysis.AnalysisFactoryTestCase;
 
 import java.util.List;
@@ -155,8 +153,6 @@ public class CommonAnalysisFactoryTests extends AnalysisFactoryTestCase {
         filters.put("brazilianstem", BrazilianStemTokenFilterFactory.class);
         filters.put("czechstem", CzechStemTokenFilterFactory.class);
         filters.put("germanstem", GermanStemTokenFilterFactory.class);
-        filters.put("telugunormalization", TeluguNormalizationFilterFactory.class);
-        filters.put("telugustem", TeluguStemFilterFactory.class);
         // this filter is not exposed and should only be used internally
         filters.put("fixedshingle", Void.class);
         return filters;

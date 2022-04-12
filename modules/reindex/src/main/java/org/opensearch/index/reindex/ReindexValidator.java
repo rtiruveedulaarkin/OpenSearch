@@ -114,7 +114,8 @@ class ReindexValidator {
             return new CharacterRunAutomaton(Automata.makeEmpty());
         }
         Automaton automaton = Regex.simpleMatchToAutomaton(allowlist.toArray(Strings.EMPTY_ARRAY));
-        automaton = MinimizationOperations.minimize(automaton, Operations.DEFAULT_DETERMINIZE_WORK_LIMIT);
+        automaton = MinimizationOperations.minimize(automaton, 10000); //Operations.DEFAULT_DETERMINIZE_WORK_LIMIT);
+
         if (Operations.isTotal(automaton)) {
             throw new IllegalArgumentException(
                 "Refusing to start because allowlist "
